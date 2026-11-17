@@ -1,0 +1,11 @@
+id,name,category,unit,aliases,image
+1,Regular milled rice,Rice,kg,"bigas,rice",
+2,Well-milled rice,Rice,kg,"bigas,rice",
+3,Chicken eggs (medium),Eggs,piece,"itlog,egg",
+4,Tomato,Vegetables,kg,kamatis,
+5,Onion (red),Vegetables,kg,sibuyas,
+7,Pork liempo,Meat,kg,"baboy,pork",
+8,Whole chicken,Meat,kg,"manok,chicken",
+13,Tilapia,Fish,kg,isda,
+14,Galunggong (round scad),Fish,kg,isda,
+15,Ampalaya (bitter gourd),Vegetables,kg,ampalaya,

@@ -23,9 +23,8 @@ of `products.csv`. Use only photos you took or that are public-domain/CC0. Do no
 (PowerShell: use `(Get-Content data\report_date.txt)` for the period.)
 
 ## Honest limits
-- The PDF reader is tested only on a synthetic table that copies the DA layout. Send a real PDF if `--debug` shows wrong headers.
-- `fetch_latest_da.py` assumes the DA page links files named `Price-Monitoring-<Month>-<D>-<YYYY>.pdf`; the DA site may block
-  or change. Check the DA site terms and keep attribution.
-- The daily national report covers Metro Manila markets. For other regions use that regional DA office's PDF
-  (pass the PDF to `da_pdf_to_csv.py`; the table layout may differ).
-- PSA OpenSTAT is not wired in yet: export a table as CSV, convert it to `prices.csv`, and build with `--type PSA_STATISTICS`.
+- The reader is tested on the real DA Daily Price Index PDF of 18 Nov 2026 (all 15 mapped products matched the report). If the DA changes the layout, the Actions run fails and the old feed stays online.
+- The Daily Price Index gives ONE prevailing (average) price per commodity for selected NCR wet markets, not a price per market or per store. The app labels it as a government reference, not a live stall price.
+- `da_market_table_to_csv.py` is the older per-market range reader, kept for regional DA files (untested on real regional PDFs).
+- To track other products, add them to `data/products.csv` and a line to `data/name_map.csv` (section, start of the commodity name, optional specification text).
+- Check DA site terms and keep the attribution. PSA OpenSTAT is not wired in yet.

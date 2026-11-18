@@ -1,0 +1,240 @@
+{
+ "version": 1,
+ "generated_at": "2026-11-18T18:26:34+08:00",
+ "source": {
+  "name": "DA Daily Price Index (NCR)",
+  "type": "DA_REFERENCE",
+  "report_period": "18 Nov 2026",
+  "attribution": "Department of Agriculture - Agribusiness and Marketing Assistance Service",
+  "url": "https://www.da.gov.ph/price-monitoring/"
+ },
+ "products": [
+  {
+   "id": 1,
+   "name": "Regular milled rice (local)",
+   "category": "Rice",
+   "unit": "kg",
+   "aliases": "bigas,rice"
+  },
+  {
+   "id": 2,
+   "name": "Well-milled rice (local)",
+   "category": "Rice",
+   "unit": "kg",
+   "aliases": "bigas,rice"
+  },
+  {
+   "id": 3,
+   "name": "Chicken egg (white, medium)",
+   "category": "Eggs",
+   "unit": "piece",
+   "aliases": "itlog,egg"
+  },
+  {
+   "id": 4,
+   "name": "Tomato",
+   "category": "Vegetables",
+   "unit": "kg",
+   "aliases": "kamatis"
+  },
+  {
+   "id": 5,
+   "name": "Red onion (local)",
+   "category": "Vegetables",
+   "unit": "kg",
+   "aliases": "sibuyas"
+  },
+  {
+   "id": 6,
+   "name": "Garlic (native/local)",
+   "category": "Vegetables",
+   "unit": "kg",
+   "aliases": "bawang"
+  },
+  {
+   "id": 7,
+   "name": "Pork belly (liempo)",
+   "category": "Meat",
+   "unit": "kg",
+   "aliases": "baboy,pork,liempo"
+  },
+  {
+   "id": 8,
+   "name": "Whole chicken (unbranded)",
+   "category": "Meat",
+   "unit": "kg",
+   "aliases": "manok,chicken"
+  },
+  {
+   "id": 9,
+   "name": "Bangus / milkfish (medium)",
+   "category": "Fish",
+   "unit": "kg",
+   "aliases": "bangus,isda"
+  },
+  {
+   "id": 10,
+   "name": "Banana (lakatan)",
+   "category": "Fruit",
+   "unit": "kg",
+   "aliases": "saging"
+  },
+  {
+   "id": 11,
+   "name": "Cooking oil (coconut)",
+   "category": "Pantry",
+   "unit": "liter",
+   "aliases": "mantika,oil"
+  },
+  {
+   "id": 12,
+   "name": "Sugar (refined)",
+   "category": "Pantry",
+   "unit": "kg",
+   "aliases": "asukal"
+  },
+  {
+   "id": 13,
+   "name": "Tilapia (medium)",
+   "category": "Fish",
+   "unit": "kg",
+   "aliases": "isda"
+  },
+  {
+   "id": 14,
+   "name": "Galunggong / roundscad (local)",
+   "category": "Fish",
+   "unit": "kg",
+   "aliases": "isda"
+  },
+  {
+   "id": 15,
+   "name": "Ampalaya (bitter gourd)",
+   "category": "Vegetables",
+   "unit": "kg",
+   "aliases": "ampalaya"
+  }
+ ],
+ "prices": [
+  {
+   "product_id": 2,
+   "amount": 49.09,
+   "unit": "kg",
+   "place": "NCR wet markets (average)",
+   "observed_on": "2026-11-18",
+   "note": "DA Daily Price Index, NCR: prevailing retail price (average of selected wet markets); Well Milled (1-19% bran streak)"
+  },
+  {
+   "product_id": 1,
+   "amount": 44.87,
+   "unit": "kg",
+   "place": "NCR wet markets (average)",
+   "observed_on": "2026-11-18",
+   "note": "DA Daily Price Index, NCR: prevailing retail price (average of selected wet markets); Regular Milled (20-40% bran streak)"
+  },
+  {
+   "product_id": 9,
+   "amount": 241.73,
+   "unit": "kg",
+   "place": "NCR wet markets (average)",
+   "observed_on": "2026-11-18",
+   "note": "DA Daily Price Index, NCR: prevailing retail price (average of selected wet markets); Milkfish (Bangus) (Medium (3-4 pcs/kg))"
+  },
+  {
+   "product_id": 14,
+   "amount": 307.67,
+   "unit": "kg",
+   "place": "NCR wet markets (average)",
+   "observed_on": "2026-11-18",
+   "note": "DA Daily Price Index, NCR: prevailing retail price (average of selected wet markets); Roundscad (Galunggong), Local (Male, Medium (12-14 pcs/kg), Fresh or Chilled)"
+  },
+  {
+   "product_id": 13,
+   "amount": 155.43,
+   "unit": "kg",
+   "place": "NCR wet markets (average)",
+   "observed_on": "2026-11-18",
+   "note": "DA Daily Price Index, NCR: prevailing retail price (average of selected wet markets); Tilapia (Medium (5-6 pcs/kg), Fresh)"
+  },
+  {
+   "product_id": 7,
+   "amount": 369.03,
+   "unit": "kg",
+   "place": "NCR wet markets (average)",
+   "observed_on": "2026-11-18",
+   "note": "DA Daily Price Index, NCR: prevailing retail price (average of selected wet markets); Belly (Liempo), Local (Fresh or Chilled)"
+  },
+  {
+   "product_id": 8,
+   "amount": 202.18,
+   "unit": "kg",
+   "place": "NCR wet markets (average)",
+   "observed_on": "2026-11-18",
+   "note": "DA Daily Price Index, NCR: prevailing retail price (average of selected wet markets); Whole Chicken, Unbranded (Fresh or Chilled, Unbranded)"
+  },
+  {
+   "product_id": 3,
+   "amount": 8.18,
+   "unit": "piece",
+   "place": "NCR wet markets (average)",
+   "observed_on": "2026-11-18",
+   "note": "DA Daily Price Index, NCR: prevailing retail price (average of selected wet markets); Chicken Egg (White, Medium) (56-60 grams/pc)"
+  },
+  {
+   "product_id": 15,
+   "amount": 108.48,
+   "unit": "kg",
+   "place": "NCR wet markets (average)",
+   "observed_on": "2026-11-18",
+   "note": "DA Daily Price Index, NCR: prevailing retail price (average of selected wet markets); Bitter Gourd (Ampalaya) (4-5 pcs/kg)"
+  },
+  {
+   "product_id": 4,
+   "amount": 123.45,
+   "unit": "kg",
+   "place": "NCR wet markets (average)",
+   "observed_on": "2026-11-18",
+   "note": "DA Daily Price Index, NCR: prevailing retail price (average of selected wet markets); Tomato (Ripe, 15-18 pcs/kg)"
+  },
+  {
+   "product_id": 6,
+   "amount": 385.0,
+   "unit": "kg",
+   "place": "NCR wet markets (average)",
+   "observed_on": "2026-11-18",
+   "note": "DA Daily Price Index, NCR: prevailing retail price (average of selected wet markets); Garlic, Native/Local (Whole, covered with outer skin, 3.0 cm and 3.9 cm in diam.)"
+  },
+  {
+   "product_id": 5,
+   "amount": 129.87,
+   "unit": "kg",
+   "place": "NCR wet markets (average)",
+   "observed_on": "2026-11-18",
+   "note": "DA Daily Price Index, NCR: prevailing retail price (average of selected wet markets); Red Onion, Local (Medium (13-15 pcs/kg))"
+  },
+  {
+   "product_id": 10,
+   "amount": 96.54,
+   "unit": "kg",
+   "place": "NCR wet markets (average)",
+   "observed_on": "2026-11-18",
+   "note": "DA Daily Price Index, NCR: prevailing retail price (average of selected wet markets); Banana (Lakatan) (Lakatan Variety, Ripe (8-10 pcs/kg))"
+  },
+  {
+   "product_id": 12,
+   "amount": 81.96,
+   "unit": "kg",
+   "place": "NCR wet markets (average)",
+   "observed_on": "2026-11-18",
+   "note": "DA Daily Price Index, NCR: prevailing retail price (average of selected wet markets); Sugar (Refined)"
+  },
+  {
+   "product_id": 11,
+   "amount": 151.3,
+   "unit": "liter",
+   "place": "NCR wet markets (average)",
+   "observed_on": "2026-11-18",
+   "note": "DA Daily Price Index, NCR: prevailing retail price (average of selected wet markets); Cooking Oil (Coconut) (1 Liter/bottle)"
+  }
+ ]
+}

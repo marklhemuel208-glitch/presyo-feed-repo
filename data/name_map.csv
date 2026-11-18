@@ -1,11 +1,16 @@
-da_header,product_id
-well-milled rice (local),2
-regular milled,1
-egg (medium),3
-tomato,4
-red onion (local),5
-fresh pork liempo,7
-fresh whole chicken,8
-tilapia,13
-galunggong,14
-ampalaya,15
+section,match,spec_contains,product_id
+local commercial rice,regular milled,,1
+local commercial rice,well milled,,2
+egg,"chicken egg (white, medium)",,3
+lowland vegetables,tomato,,4
+spices,"red onion, local",,5
+spices,"garlic, native/local",,6
+pork,"belly (liempo), local",,7
+chicken,"whole chicken, unbranded",,8
+fisheries and seafood,milkfish (bangus),medium,9
+fruits,banana (lakatan),,10
+other basic commodities,cooking oil (coconut),,11
+other basic commodities,sugar (refined),,12
+fisheries and seafood,tilapia,,13
+fisheries and seafood,"roundscad (galunggong), local",,14
+lowland vegetables,bitter gourd (ampalaya),,15

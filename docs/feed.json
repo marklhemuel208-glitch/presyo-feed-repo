@@ -1,8 +1,8 @@
 {
  "version": 1,
- "generated_at": "2026-11-18T18:26:34+08:00",
+ "generated_at": "2026-11-18T18:46:53+08:00",
  "source": {
-  "name": "DA Daily Price Index (NCR)",
+  "name": "DA Daily Price Monitoring (NCR markets)",
   "type": "DA_REFERENCE",
   "report_period": "18 Nov 2026",
   "attribution": "Department of Agriculture - Agribusiness and Marketing Assistance Service",

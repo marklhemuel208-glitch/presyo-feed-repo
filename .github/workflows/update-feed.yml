@@ -20,7 +20,7 @@ jobs:
       - name: Build feed.json
         run: |
           python scripts/csv_to_feed.py \
-            --source-name "DA Daily Price Monitoring (NCR markets)" \
+            --source-name "DA Daily Price Index (NCR)" \
             --report-period "$(cat data/report_date.txt)" \
             --attribution "Department of Agriculture - Agribusiness and Marketing Assistance Service" \
             --source-url "https://www.da.gov.ph/price-monitoring/" \

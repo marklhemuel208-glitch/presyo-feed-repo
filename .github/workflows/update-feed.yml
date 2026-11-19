@@ -1,13 +1,17 @@
 name: Update price feed
 on:
   schedule:
-    - cron: "30 1 * * *"
+    - cron: "30 1 * * *"      # every day 09:30 Philippine time
   workflow_dispatch:
 permissions:
   contents: write
+concurrency:
+  group: feed
+  cancel-in-progress: false
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -17,11 +21,14 @@ jobs:
         run: python scripts/fetch_latest_da.py --out data/latest.pdf
       - name: Read prices from the PDF
         run: python scripts/da_pdf_to_csv.py data/latest.pdf
+      - name: Add to history (keeps 45 days)
+        run: python scripts/update_history.py data/prices.csv
       - name: Build feed.json
         run: |
           python scripts/csv_to_feed.py \
+            --prices data/history.csv \
             --source-name "DA Daily Price Index (NCR)" \
-            --report-period "$(cat data/report_date.txt)" \
+            --report-period "$(python scripts/update_history.py --print-latest)" \
             --attribution "Department of Agriculture - Agribusiness and Marketing Assistance Service" \
             --source-url "https://www.da.gov.ph/price-monitoring/" \
             --image-base "https://${GITHUB_REPOSITORY_OWNER}.github.io/${GITHUB_REPOSITORY#*/}/images/" \
@@ -30,5 +37,5 @@ jobs:
         run: |
           git config user.name "feed-bot"
           git config user.email "feed-bot@users.noreply.github.com"
-          git add docs/feed.json
+          git add docs/feed.json data/history.csv
           if ! git diff --cached --quiet; then git commit -m "Update feed"; git push; fi

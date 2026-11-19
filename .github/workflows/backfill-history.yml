@@ -1,0 +1,49 @@
+name: Backfill price history (manual)
+on:
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "How many of the newest DA reports to load"
+        default: "21"
+permissions:
+  contents: write
+concurrency:
+  group: feed
+  cancel-in-progress: false
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install pdfplumber
+      - name: Download recent reports
+        run: python scripts/fetch_latest_da.py --limit "${{ inputs.count }}" --out-dir data/backfill
+      - name: Read each report into history (skips files the reader cannot understand)
+        run: |
+          for f in data/backfill/*.pdf; do
+            echo "== $f"
+            if python scripts/da_pdf_to_csv.py "$f" --out data/day.csv --date-out data/day_date.txt; then
+              python scripts/update_history.py data/day.csv
+            else
+              echo "skipped $f"
+            fi
+          done
+      - name: Build feed.json
+        run: |
+          python scripts/csv_to_feed.py \
+            --prices data/history.csv \
+            --source-name "DA Daily Price Index (NCR)" \
+            --report-period "$(python scripts/update_history.py --print-latest)" \
+            --attribution "Department of Agriculture - Agribusiness and Marketing Assistance Service" \
+            --source-url "https://www.da.gov.ph/price-monitoring/" \
+            --image-base "https://${GITHUB_REPOSITORY_OWNER}.github.io/${GITHUB_REPOSITORY#*/}/images/" \
+            --out docs/feed.json
+      - name: Publish if changed
+        run: |
+          git config user.name "feed-bot"
+          git config user.email "feed-bot@users.noreply.github.com"
+          git add docs/feed.json data/history.csv
+          if ! git diff --cached --quiet; then git commit -m "Backfill history"; git push; fi
